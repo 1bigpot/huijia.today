@@ -69,3 +69,27 @@
 @if (jekyll-config('facebook_sdk.enable') and jekyll-config('facebook_sdk.like_button')) or (jekyll-config('vkontakte_api.enable') and jekyll-config('vkontakte_api.like')) or jekyll-config('rating.enable') {
   @include post-widgets;
 }
+
+.post-copyright {
+  font-size: 14px;
+  color: $grey-dark;
+  img { border: none; }
+  text-align: center;
+  margin-top: 50px;
+}
+
+.weibo,
+.wechat,
+.zhihu,
+.toutiao { display: inline-block; }
+
+.weibo,
+.wechat,
+.zhihu {
+  margin-right: 10px;
+
+  &::after {
+    content: "|";
+    padding-left: 10px;
+  }
+}

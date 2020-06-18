@@ -7,9 +7,9 @@ host: 10.0.0.201
 port: 4000
 
 # Site
-title: 回国 Info
-subtitle:
-description: 回国信息一站式汇总
+title: 回家 today
+subtitle: 回国信息一站式汇总 by 好大一口锅
+description: 欢迎在各平台关注作者
 author: 好大一口锅
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
 language: zh-Hans
@@ -121,13 +121,13 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  flights-list: /flights-list/
-  #global-airlines-info: /global-airlines-info/
-  global-transfer-info: /global-transfer-info/
-  experience-share: /experience-share/
-  quarantine-hotels-share: /quarantine-hotels-share/
-  wechat-group-chats: /wechat-group-chats/
-  #contact-us: /contact-us/
+  flights-list: /航班列表
+  #global-airlines-info: /航司信息
+  global-transfer-info: /转机信息
+  experience-share: /回国经历分享
+  quarantine-hotels-share: /隔离酒店分享
+  wechat-group-chats: /微信群聊
+  #contact-us: /联系我们
 
   #about: /about/
   #archives: /archives/
@@ -226,6 +226,7 @@ font:
 social:
   微博: https://weibo.com/7415485975/
   微信公众号: https://mp.weixin.qq.com/s/lm14EySamxKjeVbmqG_Nng
+  头条号: https://www.toutiao.com/c/user/3878726964623608/
  
 
 # Social Links Icons
@@ -296,9 +297,9 @@ sidebar:
 links_title: Links
 links_layout: block
 #links_layout: inline
-links:
-  微博: https://weibo.com/7415485975/
-  微信公众号: https://mp.weixin.qq.com/s/lm14EySamxKjeVbmqG_Nng
+#links:
+  # 微博: https://weibo.com/7415485975/
+  # 微信公众号: https://mp.weixin.qq.com/s/lm14EySamxKjeVbmqG_Nng
 
 
 # ---------------------------------------------------------------
@@ -391,8 +392,8 @@ han: false
 #valine
 valine:
   enable: true
-  leancloud_appid: jdH8y8ugrxvB5nw5eHjOQv6O-gzGzoHsz
-  leancloud_appkey: iQx4oQm8xjccnA43Jb1MhbwH
+  leancloud_appid: H3nh8VmanEFzwLTQDdJUS1KU-MdYXbMMI
+  leancloud_appkey: TlH1DRuYhR0sPcSFhGyxzaFa
   placeholder: "评论区供回国信息分享和交流，请不要发布广告和其它违规信息。"
   
 

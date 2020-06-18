@@ -134,9 +134,9 @@ body { position: relative; font-family: "Lato", "PingFang SC", "Microsoft YaHei"
 
 h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-weight: bold; line-height: 1.5; font-family: "Lato", "PingFang SC", "Microsoft YaHei", sans-serif; }
 
-h2, h3, h4 { margin: 40px 0 20px; }
+h2, h3, h4 { margin: 50px 0 20px; }
 
-h5, h6 { margin: 20px 0 10px; }
+h5, h6 { margin: 30px 0 10px; }
 
 h1 { font-size: 26px; }
 
@@ -365,7 +365,7 @@ pre .k, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt, pre .javascript .function {
 @media (max-width: 767px) { .pagination { border-top: none; }
   .pagination .prev, .pagination .next, .pagination .page-number { margin-bottom: 10px; border-top: 0; border-bottom: 1px solid #eee; }
   .pagination .prev:hover, .pagination .next:hover, .pagination .page-number:hover { border-bottom-color: #222; } }
-.comments { margin: 60px 20px 0; }
+.comments { margin: 0 20px 0; }
 
 .tag-cloud { text-align: center; }
 .tag-cloud a { display: inline-block; margin: 10px; }
@@ -528,6 +528,14 @@ pre .k, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt, pre .javascript .function {
 
 .fancybox-close, .fancybox-close:hover { border: none; }
 
+.post-copyright { font-size: 14px; color: #999; text-align: center; margin-top: 50px; }
+.post-copyright img { border: none; }
+
+.weibo, .wechat, .zhihu, .toutiao { display: inline-block; }
+
+.weibo, .wechat, .zhihu { margin-right: 10px; }
+.weibo::after, .wechat::after, .zhihu::after { content: "|"; padding-left: 10px; }
+
 .sidebar { position: fixed; right: 0; top: 0; bottom: 0; width: 0; z-index: 1040; box-shadow: inset 0 2px 6px black; background: #222; -webkit-transform: translateZ(0); }
 .sidebar a { color: #999; border-bottom-color: #555; }
 .sidebar a:hover { color: #eee; }
@@ -568,7 +576,7 @@ pre .k, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt, pre .javascript .function {
 .links-of-author { margin-top: 20px; }
 
 .links-of-author a { display: inline-block; vertical-align: middle; margin-right: 10px; margin-bottom: 10px; border-bottom-color: #555; font-size: 13px; }
-.links-of-author a:before { display: inline-block; vertical-align: middle; margin-right: 3px; content: " "; width: 4px; height: 4px; border-radius: 50%; background: #d100ff; }
+.links-of-author a:before { display: inline-block; vertical-align: middle; margin-right: 3px; content: " "; width: 4px; height: 4px; border-radius: 50%; background: #ffffb8; }
 
 .links-of-blogroll { font-size: 13px; }
 
@@ -626,12 +634,12 @@ pre .k, pre .kd, pre .kn, pre .kp, pre .kr, pre .kt, pre .javascript .function {
 
 .with-love { display: inline-block; margin: 0 5px; }
 
-.powered-by, .theme-info, .weibo, .wechat { display: inline-block; }
+.powered-by, .theme-info, .weibo, .wechat, .zhihu, .toutiao { display: inline-block; }
 
-.powered-by, .weibo { margin-right: 10px; }
-.powered-by::after, .weibo::after { content: "|"; padding-left: 10px; }
+.powered-by, .weibo, .wechat, .zhihu { margin-right: 10px; }
+.powered-by::after, .weibo::after, .wechat::after, .zhihu::after { content: "|"; padding-left: 10px; }
 
-.footer-links { margin-bottom: 10px; }
+.footer-links { margin-bottom: 100px; }
 
 .cc-license { margin-top: 10px; text-align: center; }
 .cc-license .cc-opacity { opacity: 0.7; border-bottom: none; }

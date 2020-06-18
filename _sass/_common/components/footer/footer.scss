@@ -15,10 +15,14 @@
 .powered-by,
 .theme-info,
 .weibo,
-.wechat { display: inline-block; }
+.wechat,
+.zhihu,
+.toutiao { display: inline-block; }
 
 .powered-by,
-.weibo {
+.weibo,
+.wechat,
+.zhihu {
   margin-right: 10px;
 
   &::after {
@@ -28,7 +32,7 @@
 }
 
 .footer-links {
-  margin-bottom: 10px;
+  margin-bottom: 100px;
 }
 
 .cc-license {

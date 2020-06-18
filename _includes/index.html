@@ -2,10 +2,53 @@
 {% assign posts = site.posts %}
 {% if site.paginate > 0 %}{% assign posts = paginator.posts %}{% endif %}
 
-
+<br />
+　　点击即可进入相应页面：
+<br />
+<br />
+<center>
+<a href="/航班列表">最新最全回国航班列表</a>
+<br />
+<br />
+<a href="/转机情况">世界各地转机情况汇总</a>
+<br />
+<br />
+<a href="/北美路线">北美转机回国可行路线汇总</a>
+<br />
+<br />
+<a href="/航司信息">全球航空公司航班信息页面列表</a>
+<br />
+<br />
+<a href="/回国经历分享">回国经历分享征集</a>
+<br />
+<br />
+<a href="/隔离酒店分享">隔离酒店分享征集</a>
+<br />
+<br />
+<a href="/退票分享">航班取消后退票分享征集</a>
+<br />
+<br />
+<a href="/微信群聊">回国微信群聊</a>
+</center>
+<br />
+<br />
+　　以下页面正在制作中，即将上线，敬请期待：
+<br />
+<br />
+<center>
+使领馆包机信息
+<br />
+<br />
+防疫健康码国际版信息
+<br />
+<br />
+七月回国形势展望
+</center>
+<br />
+<br />
 <section id="posts" class="posts-expand">
   {% for post in posts %}
-    {% if post.notshow != true %}
+	{% if post.timeline == true %}
 	  {% assign is_index = true %}
 	  {% include _macro/post.html %}
 	{% endif %}
