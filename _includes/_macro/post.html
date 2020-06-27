@@ -362,41 +362,45 @@
       {% endunless %}
     </div>
 
-    <div class="post-copyright">
-      <div class="copyright" >
-        {% assign current = site.time | date: '%Y' %}
-        {% assign since = site.since | downcase %}
-        &copy; {% if site.since and since != current %} {{ since }} - {% endif %}
-        <span itemprop="copyrightYear">{{ current }}</span>
-        <!-- <span class="with-love">
-          <i class="fa fa-{{ site.authoricon }}"></i>
-        </span> -->
-        <span class="author" itemprop="copyrightHolder">{{ site.author }}</span>
-      </div>
+    <div>
+      {% unless is_index %}
+        <div class="post-copyright">
+          <div class="copyright" >
+            {% assign current = site.time | date: '%Y' %}
+            {% assign since = site.since | downcase %}
+            &copy; {% if site.since and since != current %} {{ since }} - {% endif %}
+            <span itemprop="copyrightYear">{{ current }}</span>
+            <!-- <span class="with-love">
+              <i class="fa fa-{{ site.authoricon }}"></i>
+            </span> -->
+            <span class="author" itemprop="copyrightHolder">{{ site.author }}</span>
+          </div>
 
-      <div class="copyright-claim">
-        <p>经作者授权后方可转载</p>
-      </div>
+          <div class="copyright-claim">
+            <p>经作者授权后方可转载</p>
+          </div>
 
-      <div class="footer-links">
-        <div class="weibo">
-          <i class="fa fa-fw fa-weibo"></i>
-          <a class="theme-link" href="https://www.weibo.com/u/7415485975">微博</a>
+          <div class="footer-links">
+            <div class="weibo">
+              <i class="fa fa-fw fa-weibo"></i>
+              <a class="theme-link" href="https://www.weibo.com/u/7415485975">微博</a>
+            </div>
+
+            <div class="wechat">
+              <i class="fa fa-fw fa-weixin"></i>
+              <a class="theme-link" href="https://mp.weixin.qq.com/s/lm14EySamxKjeVbmqG_Nng">微信公众号</a>
+            </div>
+
+            <div class="toutiao">
+              <a class="theme-link" href="https://www.toutiao.com/c/user/3878726964623608/#mid=1669604127702019">头条号</a>
+            </div>
+          </div>
         </div>
-
-        <div class="wechat">
-          <i class="fa fa-fw fa-weixin"></i>
-          <a class="theme-link" href="https://mp.weixin.qq.com/s/lm14EySamxKjeVbmqG_Nng">微信公众号</a>
-        </div>
-
-        <div class="toutiao">
-          <a class="theme-link" href="https://www.toutiao.com/c/user/3878726964623608/#mid=1669604127702019">头条号</a>
-        </div>
-      </div>
+      {% endunless %}
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.size != 0 and is_index == nil or is_index == false %}
+      {% if post.tags and post.tags.size != 0 and is_index == false %}
         <div class="post-tags">
           {% for tag in post.tags %}
             {% assign tag_url_encode = tag | url_encode | replace: '+', '%20' %}
@@ -439,28 +443,28 @@
       {% endif %}
       {% endunless %}
 
-      {% if post.timeline %}
-      {% if post.previous or post.next %}
-        <div class="post-nav" id="post-nav-id">
-          <div class="post-nav-next post-nav-item">
-            {% if post.next %}
-              <a href="{{ post.next.url | relative_url }}" rel="next" title="{{ post.next.title }}">
-                <i class="fa fa-chevron-left"></i> {{ post.next.title }}
-              </a>
-            {% endif %}
-          </div>
+      {% if post.timeline and is_index == false %}
+        {% if post.previous or post.next %}
+          <div class="post-nav" id="post-nav-id">
+            <div class="post-nav-next post-nav-item">
+              {% if post.next %}
+                <a href="{{ post.next.url | relative_url }}" rel="next" title="{{ post.next.title }}">
+                  <i class="fa fa-chevron-left"></i> {{ post.next.title }}
+                </a>
+              {% endif %}
+            </div>
 
-          <span class="post-nav-divider"></span>
+            <span class="post-nav-divider"></span>
 
-          <div class="post-nav-prev post-nav-item">
-            {% if post.previous %}
-              <a href="{{ post.previous.url | relative_url }}" rel="prev" title="{{ post.previous.title }}">
-                {{ post.previous.title }} <i class="fa fa-chevron-right"></i>
-              </a>
-            {% endif %}
+            <div class="post-nav-prev post-nav-item">
+              {% if post.previous %}
+                <a href="{{ post.previous.url | relative_url }}" rel="prev" title="{{ post.previous.title }}">
+                  {{ post.previous.title }} <i class="fa fa-chevron-right"></i>
+                </a>
+              {% endif %}
+            </div>
           </div>
-        </div>
-      {% endif %}
+        {% endif %}
       {% endif %}
 
       {% if is_index %}
